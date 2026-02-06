@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router";
 import { ThemeProvider } from "./core/createContext";
 import Home from "./modules/Pages/Home";
 import NotFound from "./modules/Layout/NotFound";
-import DoctorDetails from "./modules/pages/DoctorDetails";
+import DoctorDetails from "./modules/Pages/DoctorDetails";
 import Loading from "./modules/components/Loading";
 import WhatsAppButton from "./modules/components/WhatsAppButton";
 
