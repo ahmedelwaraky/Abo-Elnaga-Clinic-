@@ -1,0 +1,194 @@
+import { useTheme } from "../../core/createContext";
+import { specializations, stats } from "../../data/AboutDoctor";
+import DoctorImage from "../../assets/images/main/DR-AHMED.png";
+
+const AboutDoctor = () => {
+  const { isDark } = useTheme();
+
+  return (
+    <section
+      id="about"
+      className={`py-20 ${
+        isDark ? "bg-[#2a2a2a]" : "bg-[#e8e5dc]"
+      }`}
+    >
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Added top spacing for navigation */}
+        <div className="h-20"></div>
+        
+        <div className="grid md:grid-cols-2 gap-12 items-start">
+          {/* Right Side - Doctor Image */}
+          <div className="order-2 md:order-1 flex justify-center">
+            <div className="relative w-full max-w-md">
+              {/* Main Image Container */}
+              <div
+                className={`relative rounded-2xl overflow-hidden shadow-2xl bg-gray-100 ${
+                  isDark ? "shadow-black/50" : "shadow-gray-400/30"
+                }`}
+              >
+                <img
+                  src={DoctorImage}
+                  alt="د. أحمد أبو النجا"
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+
+              {/* Floating Experience Badge */}
+              <div 
+                className="absolute -bottom-6 -left-6 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-2xl shadow-2xl p-6 hover:scale-110"
+                style={{
+                  animation: 'floating 3s ease-in-out infinite',
+                  transition: 'transform 0.3s ease-in-out'
+                }}
+              >
+                <style>
+                  {`
+                    @keyframes floating {
+                      0%, 100% {
+                        transform: translateY(0px);
+                      }
+                      50% {
+                        transform: translateY(-10px);
+                      }
+                    }
+                  `}
+                </style>
+                <div className="text-center">
+                  <div
+                    className="text-4xl font-bold text-gray-900"
+                    style={{ fontFamily: '"Cairo", sans-serif' }}
+                  >
+                    12+
+                  </div>
+                  <div
+                    className="text-sm font-medium text-gray-800"
+                    style={{ fontFamily: '"Cairo", sans-serif' }}
+                  >
+                    سنة خبرة
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Left Side - Content */}
+          <div className="order-1 md:order-2 text-right">
+            {/* Title */}
+            <h2
+              className={`text-4xl md:text-5xl font-semibold mb-4 ${
+                isDark ? "text-white" : "text-gray-700"
+              }`}
+              style={{ fontFamily: '"Cairo", sans-serif' }}
+            >
+              تعرف على د. أحمد أبو النجا
+            </h2>
+
+            {/* Subtitle */}
+            <p
+              className={`text-xl mb-6 ${
+                isDark ? "text-gray-300" : "text-gray-600"
+              }`}
+              style={{ fontFamily: '"Cairo", sans-serif' }}
+            >
+              أخصائي طب وجراحة الفم وتقويم الأسنان
+            </p>
+
+            {/* Description */}
+            <p
+              className={`text-base leading-relaxed mb-8 ${
+                isDark ? "text-gray-300" : "text-gray-700"
+              }`}
+              style={{ fontFamily: '"Cairo", sans-serif' }}
+            >
+              الدكتور أحمد أبو النجا بخبرة أكثر من 12 عام في مجال طب الأسنان منذ
+              تخرجه عام 2013. حاصل على بكالوريوس طب وجراحة الفم والأسنان وجراحات
+              متقدم في زراعة الأسنان وتجميلها، وماجستير متقدم في تقويم الأسنان
+              تخصص الدكتور أحمد في تقويم الأسنان، ويسعى دائماً لمواكبة أحدث
+              التقنيات للتقويم لضمان راحة المرضاء.
+            </p>
+
+            {/* Specializations Heading */}
+            <h3
+              className={`text-xl font-bold mb-4 ${
+                isDark ? "text-white" : "text-gray-700"
+              }`}
+              style={{ fontFamily: '"Cairo", sans-serif' }}
+            >
+              التخصصات
+            </h3>
+
+            {/* Specializations Tags */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10">
+              {specializations.map((spec, index) => (
+                <span
+                  key={index}
+                  className={`px-4 py-2 rounded-lg text-sm font-medium hover:scale-105 ${
+                    isDark
+                      ? "bg-blue-900/50 text-blue-300 border border-blue-700/50 hover:bg-blue-800/60"
+                      : "bg-blue-100 text-blue-700 hover:bg-blue-200"
+                  }`}
+                  style={{ 
+                    fontFamily: '"Cairo", sans-serif',
+                    transition: 'transform 0.2s ease-in-out'
+                  }}
+                >
+                  {spec.text}
+                </span>
+              ))}
+            </div>
+
+            {/* Statistics Cards */}
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+              {stats.map((stat, index) => {
+                const IconComponent = stat.icon;
+                return (
+                  <div
+                    key={index}
+                    className={`rounded-xl p-6 text-center group cursor-pointer hover:-translate-y-2 ${
+                      isDark
+                        ? "bg-[#1a2332] border border-gray-700/50 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20"
+                        : "bg-white shadow-md hover:shadow-2xl hover:shadow-blue-300/30"
+                    }`}
+                    style={{ 
+                      transition: 'all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1)'
+                    }}
+                  >
+                    <IconComponent
+                      className={`w-8 h-8 mx-auto mb-3 group-hover:scale-125 group-hover:rotate-12 ${
+                        isDark ? "text-blue-400" : "text-blue-500"
+                      }`}
+                      style={{ 
+                        transition: 'all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55)'
+                      }}
+                    />
+                    <div
+                      className={`text-2xl font-bold mb-1 group-hover:scale-110 ${
+                        isDark ? "text-white" : "text-gray-900"
+                      }`}
+                      style={{ 
+                        fontFamily: '"Cairo", sans-serif',
+                        transition: 'transform 0.3s ease-in-out'
+                      }}
+                    >
+                      {stat.number}
+                    </div>
+                    <div
+                      className={`text-xs ${
+                        isDark ? "text-gray-400" : "text-gray-600"
+                      }`}
+                      style={{ fontFamily: '"Cairo", sans-serif' }}
+                    >
+                      {stat.label}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default AboutDoctor;
