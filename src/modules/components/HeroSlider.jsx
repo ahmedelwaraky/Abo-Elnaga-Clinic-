@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { slider } from "../../Data/slider";
 import ClinicSelectionPopup from "../../shared/ui/ClinicSelectionPopup";
+import  slider  from "../../Data/slider";
 
 const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
