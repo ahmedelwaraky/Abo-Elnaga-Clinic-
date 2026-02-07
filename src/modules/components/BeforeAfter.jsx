@@ -1,6 +1,12 @@
 import { useTheme } from "../../core/createContext";
 import { cases } from "../../data/before-after";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "../../shared/ui/Carousel";
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselNext,
+  CarouselPrevious,
+} from "../../shared/ui/Carousel";
 import { Sparkles } from "lucide-react";
 
 const BeforeAfter = () => {
@@ -23,7 +29,6 @@ const BeforeAfter = () => {
             className={`text-4xl md:text-5xl font-bold mb-4 ${
               isDark ? "text-white" : "text-gray-700"
             }`}
-            style={{ fontFamily: '"Cairo", sans-serif' }}
           >
             قصص نجاح وابتسامات
           </h2>
@@ -31,7 +36,6 @@ const BeforeAfter = () => {
             className={`text-lg max-w-2xl mx-auto ${
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
-            style={{ fontFamily: '"Cairo", sans-serif' }}
           >
             اكتشف قوة ابتسامتك الجديدة
           </p>
@@ -98,7 +102,6 @@ const BeforeAfter = () => {
                             ? "bg-blue-500/90 text-white"
                             : "bg-blue-600/90 text-white"
                         }`}
-                        style={{ fontFamily: '"Cairo", sans-serif' }}
                       >
                         <Sparkles className="w-3 h-3" />
                         قبل وبعد
@@ -130,7 +133,6 @@ const BeforeAfter = () => {
             className={`mb-4 text-lg ${
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
-            style={{ fontFamily: '"Cairo", sans-serif' }}
           >
             هل تريد نفس النتائج؟
           </p>
@@ -141,7 +143,6 @@ const BeforeAfter = () => {
                 ? "bg-blue-500 text-white hover:bg-blue-600"
                 : "bg-blue-600 text-white hover:bg-blue-700"
             }`}
-            style={{ fontFamily: '"Cairo", sans-serif' }}
           >
             <Sparkles className="w-5 h-5" />
             احجز استشارة مجانية

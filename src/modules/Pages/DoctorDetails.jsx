@@ -99,8 +99,7 @@ const DoctorDetails = () => {
 
   return (
     <>
-    <Navbar/>
-      {" "}
+      <Navbar />
       <div
         className={`min-h-screen transition-colors duration-300 ${
           isDark ? "bg-[#1a2332]" : "bg-gray-50"
@@ -119,7 +118,6 @@ const DoctorDetails = () => {
                   ? "bg-blue-500 text-white hover:bg-blue-600"
                   : "bg-blue-600 text-white hover:bg-blue-700"
               }`}
-              style={{ fontFamily: '"Cairo", sans-serif' }}
             >
               <ArrowRight className="w-5 h-5" />
               العودة للرئيسية
@@ -149,7 +147,6 @@ const DoctorDetails = () => {
                   className={`text-4xl md:text-5xl font-bold mb-4 ${
                     isDark ? "text-white" : "text-gray-900"
                   }`}
-                  style={{ fontFamily: '"Cairo", sans-serif' }}
                 >
                   {doctor.nameAr}
                 </h1>
@@ -157,7 +154,6 @@ const DoctorDetails = () => {
                   className={`text-2xl mb-6 ${
                     isDark ? "text-blue-400" : "text-blue-600"
                   }`}
-                  style={{ fontFamily: '"Cairo", sans-serif' }}
                 >
                   {doctor.roleAr}
                 </p>
@@ -165,7 +161,6 @@ const DoctorDetails = () => {
                   className={`text-lg leading-relaxed mb-8 ${
                     isDark ? "text-gray-300" : "text-gray-700"
                   }`}
-                  style={{ fontFamily: '"Cairo", sans-serif' }}
                 >
                   {doctor.bio}
                 </p>
@@ -192,7 +187,6 @@ const DoctorDetails = () => {
                           className={`text-2xl font-bold mb-1 ${
                             isDark ? "text-white" : "text-gray-900"
                           }`}
-                          style={{ fontFamily: '"Cairo", sans-serif' }}
                         >
                           {stat.number}
                         </div>
@@ -200,7 +194,6 @@ const DoctorDetails = () => {
                           className={`text-sm ${
                             isDark ? "text-gray-400" : "text-gray-600"
                           }`}
-                          style={{ fontFamily: '"Cairo", sans-serif' }}
                         >
                           {stat.label}
                         </div>
@@ -220,7 +213,6 @@ const DoctorDetails = () => {
               className={`text-3xl font-bold mb-8 text-right ${
                 isDark ? "text-white" : "text-gray-900"
               }`}
-              style={{ fontFamily: '"Cairo", sans-serif' }}
             >
               المؤهلات والإنجازات
             </h2>
@@ -243,7 +235,6 @@ const DoctorDetails = () => {
                     className={`text-right ${
                       isDark ? "text-gray-300" : "text-gray-700"
                     }`}
-                    style={{ fontFamily: '"Cairo", sans-serif' }}
                   >
                     {achievement}
                   </p>
@@ -260,7 +251,6 @@ const DoctorDetails = () => {
               className={`text-3xl font-bold mb-8 text-right ${
                 isDark ? "text-white" : "text-gray-900"
               }`}
-              style={{ fontFamily: '"Cairo", sans-serif' }}
             >
               التخصصات
             </h2>
@@ -273,7 +263,6 @@ const DoctorDetails = () => {
                       ? "bg-blue-900/50 text-blue-300 border border-blue-700/50 hover:bg-blue-800/60"
                       : "bg-blue-100 text-blue-700 hover:bg-blue-200"
                   }`}
-                  style={{ fontFamily: '"Cairo", sans-serif' }}
                 >
                   {spec}
                 </div>
@@ -289,7 +278,6 @@ const DoctorDetails = () => {
               className={`text-3xl font-bold mb-8 text-right ${
                 isDark ? "text-white" : "text-gray-900"
               }`}
-              style={{ fontFamily: '"Cairo", sans-serif' }}
             >
               فيديوهات الدكتور
             </h2>
@@ -321,7 +309,6 @@ const DoctorDetails = () => {
                       className={`text-right font-bold ${
                         isDark ? "text-white" : "text-gray-900"
                       }`}
-                      style={{ fontFamily: '"Cairo", sans-serif' }}
                     >
                       {video.title}
                     </h3>
@@ -339,7 +326,6 @@ const DoctorDetails = () => {
               className={`text-3xl font-bold mb-8 text-right ${
                 isDark ? "text-white" : "text-gray-900"
               }`}
-              style={{ fontFamily: '"Cairo", sans-serif' }}
             >
               آراء المرضى
             </h2>
@@ -358,7 +344,6 @@ const DoctorDetails = () => {
                       className={`font-bold mb-2 ${
                         isDark ? "text-white" : "text-gray-900"
                       }`}
-                      style={{ fontFamily: '"Cairo", sans-serif' }}
                     >
                       {review.name}
                     </h4>
@@ -374,7 +359,6 @@ const DoctorDetails = () => {
                       className={`text-sm mb-2 ${
                         isDark ? "text-gray-300" : "text-gray-700"
                       }`}
-                      style={{ fontFamily: '"Cairo", sans-serif' }}
                     >
                       "{review.comment}"
                     </p>
@@ -382,7 +366,6 @@ const DoctorDetails = () => {
                       className={`text-xs ${
                         isDark ? "text-gray-500" : "text-gray-500"
                       }`}
-                      style={{ fontFamily: '"Cairo", sans-serif' }}
                     >
                       {review.date}
                     </p>
@@ -402,7 +385,6 @@ const DoctorDetails = () => {
               className={`text-3xl font-bold mb-4 ${
                 isDark ? "text-white" : "text-gray-900"
               }`}
-              style={{ fontFamily: '"Cairo", sans-serif' }}
             >
               هل تريد حجز موعد مع {doctor.nameAr}؟
             </h2>
@@ -410,7 +392,6 @@ const DoctorDetails = () => {
               className={`text-lg mb-8 ${
                 isDark ? "text-gray-300" : "text-gray-700"
               }`}
-              style={{ fontFamily: '"Cairo", sans-serif' }}
             >
               احجز استشارتك المجانية الآن واحصل على ابتسامة أحلامك
             </p>
@@ -421,7 +402,6 @@ const DoctorDetails = () => {
                   ? "bg-blue-500 text-white hover:bg-blue-600"
                   : "bg-blue-600 text-white hover:bg-blue-700"
               }`}
-              style={{ fontFamily: '"Cairo", sans-serif' }}
             >
               احجز موعدك الآن
               <Calendar className="w-5 h-5" />

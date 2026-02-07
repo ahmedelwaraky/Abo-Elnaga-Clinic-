@@ -54,7 +54,6 @@ const Services = () => {
             className={`text-4xl md:text-5xl font-bold mb-4 ${
               isDark ? "text-white" : "text-gray-700"
             }`}
-            style={{ fontFamily: '"Cairo", sans-serif' }}
           >
             خدماتنا لطب الأسنان
           </h2>
@@ -62,7 +61,6 @@ const Services = () => {
             className={`text-lg max-w-2xl mx-auto ${
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
-            style={{ fontFamily: '"Cairo", sans-serif' }}
           >
             رعاية أسنان شاملة بأحدث التقنيات وخطط علاج شخصية
           </p>
@@ -114,7 +112,6 @@ const Services = () => {
                   className={`text-xl font-bold mb-3 text-right ${
                     isDark ? "text-white" : "text-gray-900"
                   }`}
-                  style={{ fontFamily: '"Cairo", sans-serif' }}
                 >
                   {service.titleAr}
                 </h3>
@@ -124,7 +121,6 @@ const Services = () => {
                   className={`text-sm leading-relaxed text-right ${
                     isDark ? "text-gray-400" : "text-gray-600"
                   }`}
-                  style={{ fontFamily: '"Cairo", sans-serif' }}
                 >
                   {service.descriptionAr}
                 </p>

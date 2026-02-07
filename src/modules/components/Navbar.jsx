@@ -1,10 +1,8 @@
 import { useState } from "react";
 import { Sun, Moon, Phone, Menu, X } from "lucide-react";
-
 import Logo from "../../assets/images/main/Logo-1.png";
 import { useTheme } from "../../core/createContext";
 import ClinicSelectionPopup from "../../shared/ui/ClinicSelectionPopup";
-// import ClinicSelectionPopup from "./ClinicSelectionPopup";
 
 const Navbar = () => {
   const { isDark, toggleTheme } = useTheme();
@@ -25,87 +23,70 @@ const Navbar = () => {
   return (
     <>
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        className={`sticky top-0 z-50 backdrop-blur-md transition-all duration-300 ${
           isDark
-            ? "bg-[#1a2332] border-b border-gray-700/50"
-            : "bg-white border-b border-gray-200"
-        }`}
+            ? "bg-gray-900/95 border-gray-800"
+            : "bg-white/95 border-gray-200"
+        } border-b`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-20">
+          <div className="flex justify-between items-center h-20">
             {/* Logo and Title - Right Side (Arabic) */}
             <div className="flex items-center gap-3">
-              <div className="relative">
-                {/* Tooth Icon */}
-                <div className="w-12 h-12 rounded-lg flex items-center justify-center">
-                  <img
-                    src={Logo}
-                    alt="Abo Elnaga Clinic Logo"
-                    className="w-20 h-20 object-contain"
-                  />
-                </div>
-              </div>
-              <div className="flex flex-col items-start">
-                <h1
-                  className={`text-xl font-bold tracking-tight ${
-                    isDark ? "text-white" : "text-gray-700"
+              <img
+                src={Logo}
+                alt="Logo"
+                className="h-12 w-12 object-contain"
+              />
+              <div className="flex flex-col">
+                <span
+                  className={`text-lg font-bold ${
+                    isDark ? "text-white" : "text-gray-900"
                   }`}
-                  style={{ fontFamily: '"Cairo", sans-serif' }}
                 >
+                  {/* Tooth Icon */}
                   عيادات أبو النجا
-                </h1>
-                <p
+                </span>
+                <span
                   className={`text-xs ${
-                    isDark ? "text-gray-400" : "text-gray-500"
+                    isDark ? "text-gray-400" : "text-gray-600"
                   }`}
-                  style={{ fontFamily: '"Cairo", sans-serif' }}
                 >
                   لتقويم وزراعة الأسنان
-                </p>
+                </span>
               </div>
             </div>
 
             {/* Navigation Links - Center (Desktop) */}
-            <div className="hidden lg:flex items-center gap-1">
+            <div className="hidden lg:flex items-center gap-8">
               {navLinks.map((link, index) => (
                 <a
                   key={index}
                   href={link.href}
-                  className={`px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg relative group ${
+                  className={`text-sm font-medium transition-all duration-300 hover:scale-105 ${
                     isDark
-                      ? "text-gray-300 hover:text-white hover:bg-gray-700/50"
-                      : "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
+                      ? "text-gray-300 hover:text-white"
+                      : "text-gray-700 hover:text-gray-900"
                   }`}
-                  style={{ fontFamily: '"Cairo", sans-serif' }}
                 >
                   {link.label}
-                  <span
-                    className={`absolute bottom-0 left-0 w-0 h-0.5 ${
-                      isDark ? "bg-blue-400" : "bg-blue-500"
-                    } transition-all duration-300 group-hover:w-full`}
-                  ></span>
                 </a>
               ))}
             </div>
 
             {/* Actions - Left Side */}
-            <div className="flex items-center gap-3">
+            <div className="flex items-center gap-4">
               {/* Phone Number */}
               <a
                 href="tel:01227599182"
-                className={`hidden sm:flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
+                className={`hidden md:flex items-center gap-2 px-4 py-2 rounded-lg transition-all duration-300 ${
                   isDark
                     ? "text-gray-300 hover:bg-gray-700/50"
                     : "text-gray-700 hover:bg-gray-100"
                 }`}
               >
                 <Phone className="w-4 h-4" />
-                <span
-                  className="text-sm font-medium"
-                  style={{ fontFamily: '"Cairo", sans-serif' }}
-                >
-                  01227599182
-                </span>
+                <span className="text-sm font-medium">01227599182</span>
               </a>
 
               {/* Theme Toggle */}
@@ -113,15 +94,15 @@ const Navbar = () => {
                 onClick={toggleTheme}
                 className={`p-2.5 rounded-lg transition-all duration-300 ${
                   isDark
-                    ? "bg-gray-700/50 text-yellow-300 hover:bg-gray-700"
-                    : "bg-gray-100 text-gray-700 hover:bg-gray-200"
+                    ? "text-gray-300 hover:bg-gray-700/50"
+                    : "text-gray-700 hover:bg-gray-100"
                 }`}
                 aria-label="Toggle theme"
               >
                 {isDark ? (
-                  <Sun className="w-5 h-5 transition-transform duration-300 rotate-0 hover:rotate-180" />
+                  <Sun className="w-5 h-5" />
                 ) : (
-                  <Moon className="w-5 h-5 transition-transform duration-300 rotate-0 hover:-rotate-12" />
+                  <Moon className="w-5 h-5" />
                 )}
               </button>
 
@@ -133,7 +114,6 @@ const Navbar = () => {
                     ? "bg-blue-500 text-white hover:bg-blue-600 shadow-lg shadow-blue-500/30"
                     : "bg-blue-500 text-white hover:bg-blue-600 shadow-lg shadow-blue-500/20"
                 }`}
-                style={{ fontFamily: '"Cairo", sans-serif' }}
               >
                 احجز موعد
               </button>
@@ -162,10 +142,10 @@ const Navbar = () => {
         {mobileMenuOpen && (
           <div
             className={`lg:hidden border-t ${
-              isDark ? "border-gray-700" : "border-gray-200"
+              isDark ? "border-gray-800 bg-gray-900" : "border-gray-200 bg-white"
             }`}
           >
-            <div className="px-4 py-3 space-y-1">
+            <div className="px-4 py-4 space-y-2">
               {navLinks.map((link, index) => (
                 <a
                   key={index}
@@ -176,7 +156,6 @@ const Navbar = () => {
                       ? "text-gray-300 hover:text-white hover:bg-gray-700/50"
                       : "text-gray-700 hover:text-gray-900 hover:bg-gray-100"
                   }`}
-                  style={{ fontFamily: '"Cairo", sans-serif' }}
                 >
                   {link.label}
                 </a>
@@ -191,7 +170,6 @@ const Navbar = () => {
                     ? "bg-blue-500 text-white hover:bg-blue-600"
                     : "bg-blue-500 text-white hover:bg-blue-600"
                 }`}
-                style={{ fontFamily: '"Cairo", sans-serif' }}
               >
                 احجز موعد
               </button>

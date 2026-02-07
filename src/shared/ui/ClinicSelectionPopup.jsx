@@ -53,16 +53,10 @@ const ClinicSelectionPopup = ({ isOpen, onClose }) => {
           >
             <X className="w-5 h-5 text-white" />
           </button>
-          <h2
-            className="text-2xl font-bold text-white text-center"
-            style={{ fontFamily: '"Cairo", sans-serif' }}
-          >
+          <h2 className="text-2xl font-bold text-white text-center">
             اختر الفرع
           </h2>
-          <p
-            className="text-sm text-white/90 text-center mt-1"
-            style={{ fontFamily: '"Cairo", sans-serif' }}
-          >
+          <p className="text-sm text-white/90 text-center mt-1">
             اختر العيادة الأقرب لك لحجز موعد
           </p>
         </div>
@@ -100,15 +94,11 @@ const ClinicSelectionPopup = ({ isOpen, onClose }) => {
                   className={`text-lg font-bold ${
                     isDark ? "text-white" : "text-gray-800"
                   }`}
-                  style={{ fontFamily: '"Cairo", sans-serif' }}
                 >
                   {clinic.name}
                 </h3>
                 {!clinic.available && (
-                  <p
-                    className="text-sm text-yellow-500 font-medium"
-                    style={{ fontFamily: '"Cairo", sans-serif' }}
-                  >
+                  <p className="text-sm text-yellow-500 font-medium">
                     قريباً
                   </p>
                 )}

@@ -35,7 +35,6 @@ const Testimonials = () => {
             className={`text-4xl md:text-5xl font-bold mb-4 ${
               isDark ? "text-white" : "text-gray-700"
             }`}
-            style={{ fontFamily: '"Cairo", sans-serif' }}
           >
             آراء عملائنا
           </h2>
@@ -43,7 +42,6 @@ const Testimonials = () => {
             className={`text-lg max-w-2xl mx-auto ${
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
-            style={{ fontFamily: '"Cairo", sans-serif' }}
           >
             اكتشف تجارب المرضى الذين اختاروا عيادتنا لرعاية أسنانهم
           </p>
@@ -91,7 +89,6 @@ const Testimonials = () => {
                             className={`font-bold text-base ${
                               isDark ? "text-white" : "text-gray-900"
                             }`}
-                            style={{ fontFamily: '"Cairo", sans-serif' }}
                           >
                             {testimonial.nameAr}
                           </h3>
@@ -99,7 +96,6 @@ const Testimonials = () => {
                             className={`text-xs ${
                               isDark ? "text-gray-400" : "text-gray-500"
                             }`}
-                            style={{ fontFamily: '"Cairo", sans-serif' }}
                           >
                             {testimonial.treatmentAr}
                           </p>
@@ -135,7 +131,6 @@ const Testimonials = () => {
                       className={`text-sm leading-relaxed text-right ${
                         isDark ? "text-gray-300" : "text-gray-600"
                       }`}
-                      style={{ fontFamily: '"Cairo", sans-serif' }}
                     >
                       "{testimonial.commentAr}"
                     </p>

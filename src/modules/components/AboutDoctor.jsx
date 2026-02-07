@@ -35,10 +35,9 @@ const AboutDoctor = () => {
 
               {/* Floating Experience Badge */}
               <div 
-                className="absolute -bottom-6 -left-6 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-2xl shadow-2xl p-6 hover:scale-110"
+                className="absolute -bottom-6 -left-6 bg-gradient-to-br from-yellow-400 to-yellow-500 rounded-2xl shadow-2xl p-6 hover:scale-110 transition-transform duration-300"
                 style={{
-                  animation: 'floating 3s ease-in-out infinite',
-                  transition: 'transform 0.3s ease-in-out'
+                  animation: 'floating 3s ease-in-out infinite'
                 }}
               >
                 <style>
@@ -54,16 +53,10 @@ const AboutDoctor = () => {
                   `}
                 </style>
                 <div className="text-center">
-                  <div
-                    className="text-4xl font-bold text-gray-900"
-                    style={{ fontFamily: '"Cairo", sans-serif' }}
-                  >
+                  <div className="text-4xl font-bold text-gray-900">
                     12+
                   </div>
-                  <div
-                    className="text-sm font-medium text-gray-800"
-                    style={{ fontFamily: '"Cairo", sans-serif' }}
-                  >
+                  <div className="text-sm font-medium text-gray-800">
                     سنة خبرة
                   </div>
                 </div>
@@ -78,7 +71,6 @@ const AboutDoctor = () => {
               className={`text-4xl md:text-5xl font-semibold mb-4 ${
                 isDark ? "text-white" : "text-gray-700"
               }`}
-              style={{ fontFamily: '"Cairo", sans-serif' }}
             >
               تعرف على د. أحمد أبو النجا
             </h2>
@@ -88,7 +80,6 @@ const AboutDoctor = () => {
               className={`text-xl mb-6 ${
                 isDark ? "text-gray-300" : "text-gray-600"
               }`}
-              style={{ fontFamily: '"Cairo", sans-serif' }}
             >
               أخصائي طب وجراحة الفم وتقويم الأسنان
             </p>
@@ -98,7 +89,6 @@ const AboutDoctor = () => {
               className={`text-base leading-relaxed mb-8 ${
                 isDark ? "text-gray-300" : "text-gray-700"
               }`}
-              style={{ fontFamily: '"Cairo", sans-serif' }}
             >
               الدكتور أحمد أبو النجا بخبرة أكثر من 12 عام في مجال طب الأسنان منذ
               تخرجه عام 2013. حاصل على بكالوريوس طب وجراحة الفم والأسنان وجراحات
@@ -112,7 +102,6 @@ const AboutDoctor = () => {
               className={`text-xl font-bold mb-4 ${
                 isDark ? "text-white" : "text-gray-700"
               }`}
-              style={{ fontFamily: '"Cairo", sans-serif' }}
             >
               التخصصات
             </h3>
@@ -122,15 +111,11 @@ const AboutDoctor = () => {
               {specializations.map((spec, index) => (
                 <span
                   key={index}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium hover:scale-105 ${
+                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-transform duration-200 hover:scale-105 ${
                     isDark
                       ? "bg-blue-900/50 text-blue-300 border border-blue-700/50 hover:bg-blue-800/60"
                       : "bg-blue-100 text-blue-700 hover:bg-blue-200"
                   }`}
-                  style={{ 
-                    fontFamily: '"Cairo", sans-serif',
-                    transition: 'transform 0.2s ease-in-out'
-                  }}
                 >
                   {spec.text}
                 </span>
@@ -144,7 +129,7 @@ const AboutDoctor = () => {
                 return (
                   <div
                     key={index}
-                    className={`rounded-xl p-6 text-center group cursor-pointer hover:-translate-y-2 ${
+                    className={`rounded-xl p-6 text-center group cursor-pointer transition-all duration-[400ms] hover:-translate-y-2 ${
                       isDark
                         ? "bg-[#1a2332] border border-gray-700/50 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-500/20"
                         : "bg-white shadow-md hover:shadow-2xl hover:shadow-blue-300/30"
@@ -154,7 +139,7 @@ const AboutDoctor = () => {
                     }}
                   >
                     <IconComponent
-                      className={`w-8 h-8 mx-auto mb-3 group-hover:scale-125 group-hover:rotate-12 ${
+                      className={`w-8 h-8 mx-auto mb-3 transition-all duration-[400ms] group-hover:scale-125 group-hover:rotate-12 ${
                         isDark ? "text-blue-400" : "text-blue-500"
                       }`}
                       style={{ 
@@ -162,13 +147,9 @@ const AboutDoctor = () => {
                       }}
                     />
                     <div
-                      className={`text-2xl font-bold mb-1 group-hover:scale-110 ${
+                      className={`text-2xl font-bold mb-1 transition-transform duration-300 group-hover:scale-110 ${
                         isDark ? "text-white" : "text-gray-900"
                       }`}
-                      style={{ 
-                        fontFamily: '"Cairo", sans-serif',
-                        transition: 'transform 0.3s ease-in-out'
-                      }}
                     >
                       {stat.number}
                     </div>
@@ -176,7 +157,6 @@ const AboutDoctor = () => {
                       className={`text-xs ${
                         isDark ? "text-gray-400" : "text-gray-600"
                       }`}
-                      style={{ fontFamily: '"Cairo", sans-serif' }}
                     >
                       {stat.label}
                     </div>

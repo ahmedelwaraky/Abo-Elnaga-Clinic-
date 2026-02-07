@@ -23,7 +23,6 @@ const Locations = () => {
             className={`text-4xl md:text-5xl font-bold mb-4 ${
               isDark ? "text-white" : "text-gray-700"
             }`}
-            style={{ fontFamily: '"Cairo", sans-serif' }}
           >
             فروعنا المريحة
           </h2>
@@ -31,7 +30,6 @@ const Locations = () => {
             className={`text-lg max-w-2xl mx-auto ${
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
-            style={{ fontFamily: '"Cairo", sans-serif' }}
           >
             قم بزيارتنا في أي من فروعنا الحديثة للحصول على أفضل تجربة طبية
           </p>
@@ -54,7 +52,6 @@ const Locations = () => {
                   className={`text-xl font-semibold flex items-center gap-2 ${
                     isDark ? "text-white" : "text-gray-900"
                   }`}
-                  style={{ fontFamily: '"Cairo", sans-serif' }}
                 >
                   <MapPin
                     className={`w-5 h-5 ${
@@ -87,7 +84,6 @@ const Locations = () => {
                           ? "bg-gradient-to-br from-blue-500/10 to-blue-400/10 text-gray-400"
                           : "bg-gradient-to-br from-blue-100/50 to-blue-50/50 text-gray-600"
                       }`}
-                      style={{ fontFamily: '"Cairo", sans-serif' }}
                     >
                       الخريطة غير متاحة حالياً
                     </div>
@@ -106,7 +102,6 @@ const Locations = () => {
                       className={`${
                         isDark ? "text-gray-300" : "text-gray-700"
                       }`}
-                      style={{ fontFamily: '"Cairo", sans-serif' }}
                     >
                       {location.addressAr}
                     </span>
@@ -124,7 +119,6 @@ const Locations = () => {
                         className={`hover:underline ${
                           isDark ? "text-blue-400" : "text-blue-600"
                         }`}
-                        style={{ fontFamily: '"Cairo", sans-serif' }}
                       >
                         {location.tel}
                       </a>
@@ -133,7 +127,6 @@ const Locations = () => {
                         className={`${
                           isDark ? "text-gray-300" : "text-gray-700"
                         }`}
-                        style={{ fontFamily: '"Cairo", sans-serif' }}
                       >
                         قريباً
                       </span>
@@ -152,7 +145,6 @@ const Locations = () => {
                         className={`hover:underline ${
                           isDark ? "text-blue-400" : "text-blue-600"
                         }`}
-                        style={{ fontFamily: '"Cairo", sans-serif' }}
                       >
                         {location.phone}
                       </a>
@@ -161,7 +153,6 @@ const Locations = () => {
                         className={`${
                           isDark ? "text-gray-300" : "text-gray-700"
                         }`}
-                        style={{ fontFamily: '"Cairo", sans-serif' }}
                       >
                         قريباً
                       </span>
@@ -178,7 +169,6 @@ const Locations = () => {
                       className={`${
                         isDark ? "text-gray-300" : "text-gray-700"
                       }`}
-                      style={{ fontFamily: '"Cairo", sans-serif' }}
                     >
                       {location.hoursAr}
                     </span>
@@ -198,7 +188,6 @@ const Locations = () => {
                         ? "bg-blue-500 text-white hover:bg-blue-600"
                         : "bg-blue-600 text-white hover:bg-blue-700"
                     }`}
-                    style={{ fontFamily: '"Cairo", sans-serif' }}
                   >
                     احصل على الاتجاهات
                   </a>

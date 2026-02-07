@@ -154,7 +154,6 @@ const ReelsVideos = () => {
               className={`text-4xl md:text-5xl font-bold mb-4 ${
                 isDark ? "text-white" : "text-gray-700"
               }`}
-              style={{ fontFamily: '"Cairo", sans-serif' }}
             >
               فيديوهات تعليمية وريلز
             </h2>
@@ -162,7 +161,6 @@ const ReelsVideos = () => {
               className={`text-lg max-w-2xl mx-auto ${
                 isDark ? "text-gray-300" : "text-gray-600"
               }`}
-              style={{ fontFamily: '"Cairo", sans-serif' }}
             >
               تعلم عن رعاية الأسنان وشاهد إجراءاتنا عملياً
             </p>
@@ -204,10 +202,7 @@ const ReelsVideos = () => {
                         />
 
                         {/* الفئة - في الأعلى على اليسار */}
-                        <div
-                          className="absolute top-3 left-3 bg-yellow-400 text-gray-900 px-3 py-1.5 rounded-full text-xs font-light shadow-lg"
-                          style={{ fontFamily: '"Cairo", sans-serif' }}
-                        >
+                        <div className="absolute top-3 left-3 bg-yellow-400 text-gray-900 px-3 py-1.5 rounded-full text-xs font-light shadow-lg">
                           {video.categoryAr}
                         </div>
 
@@ -240,7 +235,6 @@ const ReelsVideos = () => {
                           className={`text-sm font-semibold text-right flex-1 mr-2 line-clamp-1 ${
                             isDark ? "text-white" : "text-gray-900"
                           }`}
-                          style={{ fontFamily: '"Cairo", sans-serif' }}
                         >
                           {video.titleAr}
                         </h3>
@@ -279,7 +273,6 @@ const ReelsVideos = () => {
                 className={`text-center text-sm ${
                   isDark ? "text-gray-300" : "text-gray-600"
                 }`}
-                style={{ fontFamily: '"Cairo", sans-serif' }}
               >
                 {shareDialog.video.titleAr}
               </p>

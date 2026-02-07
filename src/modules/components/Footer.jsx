@@ -48,10 +48,7 @@ const Footer = () => {
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 text-right"
-          style={{ fontFamily: '"Cairo", sans-serif' }}
-        >
+        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8 text-right">
           {/* Logo & About */}
           <div className="lg:col-span-1">
             <div className="flex items-center gap-2 mb-4 justify-start">
@@ -158,7 +155,7 @@ const Footer = () => {
           <div>
             <h3 className="text-lg font-semibold mb-4">اتصل بنا</h3>
             <div className="space-y-3 text-sm">
-              <div className="flex gap-3 flex-row-reverse items-start justify-end justify-end">
+              <div className="flex gap-3 flex-row-reverse items-start justify-end">
                 <a
                   href="tel:01227599182"
                   className={`transition-colors ${
@@ -228,10 +225,7 @@ const Footer = () => {
             isDark ? "border-white/20" : "border-white/20"
           }`}
         >
-          <div
-            className="flex flex-col md:flex-row-reverse justify-between items-center gap-4 text-sm text-gray-400"
-            style={{ fontFamily: '"Cairo", sans-serif' }}
-          >
+          <div className="flex flex-col md:flex-row-reverse justify-between items-center gap-4 text-sm text-gray-400">
             <p>جميع الحقوق محفوظة © 2025 عيادات أبو النجا</p>
             <div className="flex gap-6">
               <a

@@ -74,18 +74,12 @@ const HeroSlider = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-right max-w-3xl mr-auto">
             {/* Title */}
-            <h1
-              className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4"
-              style={{ fontFamily: '"Cairo", sans-serif' }}
-            >
+            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
               {slides[currentSlide].titleAr}
             </h1>
 
             {/* Subtitle */}
-            <p
-              className="text-lg md:text-xl text-white/95 mb-10 leading-relaxed"
-              style={{ fontFamily: '"Cairo", sans-serif' }}
-            >
+            <p className="text-lg md:text-xl text-white/95 mb-10 leading-relaxed">
               {slides[currentSlide].subtitleAr}
             </p>
 
@@ -95,10 +89,6 @@ const HeroSlider = () => {
               <button
                 onClick={handleBookingClick}
                 className="px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-lg shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer"
-                style={{
-                  fontFamily: '"Cairo", sans-serif',
-                  fontSize: "18px",
-                }}
               >
                 احجز موعد
               </button>
@@ -107,10 +97,6 @@ const HeroSlider = () => {
               <button
                 onClick={handleLearnMoreClick}
                 className="px-10 py-4 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg text-lg shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer"
-                style={{
-                  fontFamily: '"Cairo", sans-serif',
-                  fontSize: "18px",
-                }}
               >
                 اعرف المزيد
               </button>

@@ -27,7 +27,6 @@ const Team = () => {
             className={`text-4xl md:text-5xl font-bold mb-4 ${
               isDark ? "text-white" : "text-gray-700"
             }`}
-            style={{ fontFamily: '"Cairo", sans-serif' }}
           >
             تعرف على فريقنا المتخصص
           </h2>
@@ -35,7 +34,6 @@ const Team = () => {
             className={`text-lg max-w-2xl mx-auto ${
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
-            style={{ fontFamily: '"Cairo", sans-serif' }}
           >
             محترفون ملتزمون بصحتك وراحتك في طب الأسنان
           </p>
@@ -121,7 +119,6 @@ const Team = () => {
                           className={`text-5xl font-bold ${
                             isDark ? "text-blue-500" : "text-blue-600"
                           }`}
-                          style={{ fontFamily: '"Cairo", sans-serif' }}
                         >
                           {member.nameAr
                             .split(" ")
@@ -142,12 +139,11 @@ const Team = () => {
 
                     {/* View Profile Badge */}
                     <div
-                      className={`absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 px-4 py-2 rounded-xl text-sm font-bold ${
+                      className={`absolute bottom-4 left-1/2 -translate-x-1/2 opacity-0 group-hover:opacity-100 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 px-4 py-2 rounded-xl text-xs font-light ${
                         isDark
                           ? "bg-blue-500 text-white"
                           : "bg-blue-600 text-white"
                       }`}
-                      style={{ fontFamily: '"Cairo", sans-serif' ,fontSize:"12px" ,fontWeight:"lighter"}}
                     >
                       عرض الملف الشخصي
                     </div>
@@ -163,7 +159,6 @@ const Team = () => {
                             ? "text-blue-400 group-hover:text-blue-300"
                             : "text-gray-900 group-hover:text-blue-600"
                         }`}
-                        style={{ fontFamily: '"Cairo", sans-serif' }}
                       >
                         {member.nameAr}
                       </h3>
@@ -171,7 +166,6 @@ const Team = () => {
                         className={`text-sm font-medium ${
                           isDark ? "text-blue-300" : "text-blue-600"
                         }`}
-                        style={{ fontFamily: '"Cairo", sans-serif' }}
                       >
                         {member.roleAr}
                       </p>
