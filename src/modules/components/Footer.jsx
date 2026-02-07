@@ -8,7 +8,7 @@ import {
   Music2,
 } from "lucide-react";
 import { useTheme } from "../../core/createContext";
-import Logo from "../../assets/images/main/logo-1.png";
+import MainLogo from "../../assets/images/main/MainLogo.png";
 
 const Footer = () => {
   const { isDark } = useTheme();
@@ -55,7 +55,7 @@ const Footer = () => {
               <span className="text-xl font-bold">عيادات أبو النجا</span>
               <div className="w-12 h-12 rounded-lg flex items-center justify-center overflow-hidden">
                 <img
-                  src={Logo}
+                  src={MainLogo}
                   alt="عيادات الدكتور أحمد أبو النجا"
                   className="w-20 h-20 object-contain"
                 />

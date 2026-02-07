@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Sun, Moon, Phone, Menu, X } from "lucide-react";
-import Logo from "../../assets/images/main/Logo-1.png";
+import MainLogo from "../../assets/images/main/MainLogo.png";
 import { useTheme } from "../../core/createContext";
 import ClinicSelectionPopup from "../../shared/ui/ClinicSelectionPopup";
 
@@ -33,11 +33,7 @@ const Navbar = () => {
           <div className="flex justify-between items-center h-20">
             {/* Logo and Title - Right Side (Arabic) */}
             <div className="flex items-center gap-3">
-              <img
-                src={Logo}
-                alt="Logo"
-                className="h-12 w-12 object-contain"
-              />
+              <img src={MainLogo} alt="Logo" className="h-12 w-12 object-contain" />
               <div className="flex flex-col">
                 <span
                   className={`text-lg font-bold ${
@@ -142,7 +138,9 @@ const Navbar = () => {
         {mobileMenuOpen && (
           <div
             className={`lg:hidden border-t ${
-              isDark ? "border-gray-800 bg-gray-900" : "border-gray-200 bg-white"
+              isDark
+                ? "border-gray-800 bg-gray-900"
+                : "border-gray-200 bg-white"
             }`}
           >
             <div className="px-4 py-4 space-y-2">
