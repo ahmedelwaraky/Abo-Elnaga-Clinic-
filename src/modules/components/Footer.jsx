@@ -43,6 +43,7 @@ const Footer = () => {
 
   return (
     <footer
+      id="footer"
       className={`transition-colors duration-300 ${
         isDark ? "bg-[#0f1419] text-white" : "bg-gray-900 text-white"
       }`}

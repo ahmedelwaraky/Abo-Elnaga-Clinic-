@@ -17,8 +17,8 @@ const AboutDoctor = () => {
         <div className="h-20"></div>
         
         <div className="grid md:grid-cols-2 gap-12 items-start">
-          {/* Right Side - Doctor Image */}
-          <div className="order-2 md:order-1 flex justify-center">
+          {/* Doctor Image - Always First on Mobile */}
+          <div className="flex justify-center md:order-1">
             <div className="relative w-full max-w-md">
               {/* Main Image Container */}
               <div
@@ -64,8 +64,8 @@ const AboutDoctor = () => {
             </div>
           </div>
 
-          {/* Left Side - Content */}
-          <div className="order-1 md:order-2 text-right">
+          {/* Content - Second on Mobile */}
+          <div className="text-right md:order-2">
             {/* Title */}
             <h2
               className={`text-4xl md:text-5xl font-semibold mb-4 ${
@@ -107,11 +107,11 @@ const AboutDoctor = () => {
             </h3>
 
             {/* Specializations Tags */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mb-10">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mb-10">
               {specializations.map((spec, index) => (
                 <span
                   key={index}
-                  className={`px-4 py-2 rounded-lg text-sm font-medium transition-transform duration-200 hover:scale-105 ${
+                  className={`px-4 py-3 rounded-lg text-sm font-medium text-center transition-transform duration-200 hover:scale-105 ${
                     isDark
                       ? "bg-blue-900/50 text-blue-300 border border-blue-700/50 hover:bg-blue-800/60"
                       : "bg-blue-100 text-blue-700 hover:bg-blue-200"
@@ -123,7 +123,7 @@ const AboutDoctor = () => {
             </div>
 
             {/* Statistics Cards */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               {stats.map((stat, index) => {
                 const IconComponent = stat.icon;
                 return (

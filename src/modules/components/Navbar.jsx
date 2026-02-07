@@ -17,7 +17,7 @@ const Navbar = () => {
     { label: "الفيديوهات", href: "#videos" },
     { label: "النتائج", href: "#results" },
     { label: "الفروع", href: "#locations" },
-    { label: "تواصل معنا", href: "#branches" },
+    { label: "تواصل معنا", href: "#footer" },
   ];
 
   return (

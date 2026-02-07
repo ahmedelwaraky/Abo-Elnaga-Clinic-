@@ -15,30 +15,54 @@ const BeforeAfter = () => {
   return (
     <section
       id="results"
-      className={`py-20 transition-colors duration-300 overflow-hidden ${
+      className={`py-16 md:py-20 transition-colors duration-300 overflow-hidden ${
         isDark ? "bg-[#2a2a2a]" : "bg-[#e8e5dc]"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Added top spacing for navigation */}
-        <div className="h-20"></div>
+        <div className="h-16 md:h-20"></div>
 
         {/* العنوان الرئيسي */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-10 md:mb-12">
           <h2
-            className={`text-4xl md:text-5xl font-bold mb-4 ${
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 ${
               isDark ? "text-white" : "text-gray-700"
             }`}
           >
             قصص نجاح وابتسامات
           </h2>
           <p
-            className={`text-lg max-w-2xl mx-auto ${
+            className={`text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4 mb-6 md:mb-8 ${
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
           >
             اكتشف قوة ابتسامتك الجديدة
           </p>
+
+          {/* Decorative Divider */}
+          <div className="flex items-center justify-center gap-3 md:gap-4">
+            {/* Left Line */}
+            <div className={`h-[2px] w-24 md:w-32 rounded-full ${
+              isDark 
+                ? "bg-gradient-to-r from-transparent via-blue-400 to-blue-400" 
+                : "bg-gradient-to-r from-transparent via-blue-500 to-blue-500"
+            }`}></div>
+            
+            {/* Right Line */}
+            <div className={`h-[2px] w-24 md:w-32 rounded-full ${
+              isDark 
+                ? "bg-gradient-to-l from-transparent via-blue-400 to-blue-400" 
+                : "bg-gradient-to-l from-transparent via-blue-500 to-blue-500"
+            }`}></div>
+          </div>
+
+          {/* Decorative dots */}
+          <div className="flex items-center justify-center gap-1.5 mt-4 md:mt-6">
+            <div className={`w-1.5 h-1.5 rounded-full ${isDark ? "bg-blue-400" : "bg-blue-500"}`}></div>
+            <div className={`w-2 h-2 rounded-full ${isDark ? "bg-blue-400" : "bg-blue-500"}`}></div>
+            <div className={`w-1.5 h-1.5 rounded-full ${isDark ? "bg-blue-400" : "bg-blue-500"}`}></div>
+          </div>
         </div>
       </div>
 
@@ -127,10 +151,10 @@ const BeforeAfter = () => {
       </div>
 
       {/* دعوة للحجز */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 md:mt-12">
         <div className="text-center">
           <p
-            className={`mb-4 text-lg ${
+            className={`mb-3 md:mb-4 text-base md:text-lg ${
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
           >
@@ -138,13 +162,13 @@ const BeforeAfter = () => {
           </p>
           <a
             href="#contact"
-            className={`inline-flex items-center gap-2 px-8 py-3 rounded-lg font-bold transition-all hover:scale-105 shadow-lg ${
+            className={`inline-flex items-center gap-2 px-6 py-2.5 md:px-8 md:py-3 rounded-lg font-bold transition-all hover:scale-105 shadow-lg text-sm md:text-base ${
               isDark
                 ? "bg-blue-500 text-white hover:bg-blue-600"
                 : "bg-blue-600 text-white hover:bg-blue-700"
             }`}
           >
-            <Sparkles className="w-5 h-5" />
+            <Sparkles className="w-4 h-4 md:w-5 md:h-5" />
             احجز استشارة مجانية
           </a>
         </div>

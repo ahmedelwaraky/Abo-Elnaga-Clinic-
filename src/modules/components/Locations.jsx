@@ -9,52 +9,76 @@ const Locations = () => {
   return (
     <section
       id="locations"
-      className={`py-20 transition-colors duration-300 ${
+      className={`py-16 md:py-20 transition-colors duration-300 ${
         isDark ? "bg-[#2a2a2a]" : "bg-[#e8e5dc]"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Added top spacing for navigation */}
-        <div className="h-20"></div>
+        <div className="h-16 md:h-20"></div>
 
         {/* العنوان */}
-        <div className="text-center mb-16">
+        <div className="text-center mb-10 md:mb-16">
           <h2
-            className={`text-4xl md:text-5xl font-bold mb-4 ${
+            className={`text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-3 md:mb-4 ${
               isDark ? "text-white" : "text-gray-700"
             }`}
           >
             فروعنا المريحة
           </h2>
           <p
-            className={`text-lg max-w-2xl mx-auto ${
+            className={`text-sm sm:text-base md:text-lg max-w-2xl mx-auto px-4 mb-6 md:mb-8 ${
               isDark ? "text-gray-400" : "text-gray-600"
             }`}
           >
             قم بزيارتنا في أي من فروعنا الحديثة للحصول على أفضل تجربة طبية
           </p>
+
+          {/* Decorative Divider */}
+          <div className="flex items-center justify-center gap-3 md:gap-4">
+            {/* Left Line */}
+            <div className={`h-[2px] w-24 md:w-32 rounded-full ${
+              isDark 
+                ? "bg-gradient-to-r from-transparent via-blue-400 to-blue-400" 
+                : "bg-gradient-to-r from-transparent via-blue-500 to-blue-500"
+            }`}></div>
+            
+            {/* Right Line */}
+            <div className={`h-[2px] w-24 md:w-32 rounded-full ${
+              isDark 
+                ? "bg-gradient-to-l from-transparent via-blue-400 to-blue-400" 
+                : "bg-gradient-to-l from-transparent via-blue-500 to-blue-500"
+            }`}></div>
+          </div>
+
+          {/* Decorative dots */}
+          <div className="flex items-center justify-center gap-1.5 mt-4 md:mt-6">
+            <div className={`w-1.5 h-1.5 rounded-full ${isDark ? "bg-blue-400" : "bg-blue-500"}`}></div>
+            <div className={`w-2 h-2 rounded-full ${isDark ? "bg-blue-400" : "bg-blue-500"}`}></div>
+            <div className={`w-1.5 h-1.5 rounded-full ${isDark ? "bg-blue-400" : "bg-blue-500"}`}></div>
+          </div>
         </div>
 
         {/* الكروت */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6">
           {locations.map((location, index) => (
             <Card
               key={index}
-              className={`overflow-hidden rounded-2xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ${
+              className={`overflow-hidden rounded-xl md:rounded-2xl transition-all duration-300 hover:shadow-2xl hover:-translate-y-2 ${
                 isDark
                   ? "bg-[#243447] border-gray-700/50 hover:border-blue-500/50"
                   : "bg-white border-gray-200 hover:border-blue-400/50 shadow-md"
               }`}
             >
               {/* Header */}
-              <div className="p-6 pb-2">
+              <div className="p-4 md:p-6 pb-2">
                 <h3
-                  className={`text-xl font-semibold flex items-center gap-2 ${
+                  className={`text-lg md:text-xl font-semibold flex items-center gap-2 ${
                     isDark ? "text-white" : "text-gray-900"
                   }`}
                 >
                   <MapPin
-                    className={`w-5 h-5 ${
+                    className={`w-4 h-4 md:w-5 md:h-5 ${
                       isDark ? "text-blue-400" : "text-blue-600"
                     }`}
                   />
@@ -62,10 +86,10 @@ const Locations = () => {
                 </h3>
               </div>
 
-              <CardContent className="p-6 space-y-4">
+              <CardContent className="p-4 md:p-6 space-y-3 md:space-y-4">
                 {/* الخريطة */}
                 <div
-                  className={`w-full h-56 rounded-xl overflow-hidden border ${
+                  className={`w-full h-48 md:h-56 rounded-lg md:rounded-xl overflow-hidden border ${
                     isDark ? "border-gray-700" : "border-gray-200"
                   }`}
                 >
@@ -79,7 +103,7 @@ const Locations = () => {
                     ></iframe>
                   ) : (
                     <div
-                      className={`w-full h-full flex items-center justify-center text-sm ${
+                      className={`w-full h-full flex items-center justify-center text-xs sm:text-sm ${
                         isDark
                           ? "bg-gradient-to-br from-blue-500/10 to-blue-400/10 text-gray-400"
                           : "bg-gradient-to-br from-blue-100/50 to-blue-50/50 text-gray-600"
@@ -91,10 +115,10 @@ const Locations = () => {
                 </div>
 
                 {/* البيانات */}
-                <div className="space-y-3 text-sm">
-                  <div className="flex gap-3">
+                <div className="space-y-2.5 md:space-y-3 text-xs sm:text-sm">
+                  <div className="flex gap-2 md:gap-3">
                     <MapPin
-                      className={`w-5 h-5 flex-shrink-0 ${
+                      className={`w-4 h-4 md:w-5 md:h-5 flex-shrink-0 ${
                         isDark ? "text-gray-400" : "text-gray-600"
                       }`}
                     />
@@ -107,9 +131,9 @@ const Locations = () => {
                     </span>
                   </div>
 
-                  <div className="flex gap-3">
+                  <div className="flex gap-2 md:gap-3">
                     <Headphones
-                      className={`w-5 h-5 flex-shrink-0 ${
+                      className={`w-4 h-4 md:w-5 md:h-5 flex-shrink-0 ${
                         isDark ? "text-gray-400" : "text-gray-600"
                       }`}
                     />
@@ -133,9 +157,9 @@ const Locations = () => {
                     )}
                   </div>
 
-                  <div className="flex gap-3">
+                  <div className="flex gap-2 md:gap-3">
                     <Phone
-                      className={`w-5 h-5 flex-shrink-0 ${
+                      className={`w-4 h-4 md:w-5 md:h-5 flex-shrink-0 ${
                         isDark ? "text-gray-400" : "text-gray-600"
                       }`}
                     />
@@ -159,9 +183,9 @@ const Locations = () => {
                     )}
                   </div>
 
-                  <div className="flex gap-3">
+                  <div className="flex gap-2 md:gap-3">
                     <Clock
-                      className={`w-5 h-5 flex-shrink-0 ${
+                      className={`w-4 h-4 md:w-5 md:h-5 flex-shrink-0 ${
                         isDark ? "text-gray-400" : "text-gray-600"
                       }`}
                     />
@@ -183,7 +207,7 @@ const Locations = () => {
                     )}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className={`block w-full mt-4 px-4 py-2 rounded-lg text-center font-bold transition-all hover:scale-105 ${
+                    className={`block w-full mt-3 md:mt-4 px-4 py-2.5 md:py-2 rounded-lg text-center text-sm md:text-base font-bold transition-all hover:scale-105 ${
                       isDark
                         ? "bg-blue-500 text-white hover:bg-blue-600"
                         : "bg-blue-600 text-white hover:bg-blue-700"

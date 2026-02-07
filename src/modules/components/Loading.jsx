@@ -57,19 +57,19 @@ const Loading = ({ onComplete }) => {
       </div>
 
       {/* المحتوى الرئيسي */}
-      <div className="relative z-10 flex flex-col items-center justify-center space-y-12">
+      <div className="relative z-10 flex flex-col items-center justify-center space-y-8 md:space-y-12">
         {/* اللوجو مع الحلقة الدوارة */}
         <div className="relative">
           {/* حلقات دوارة متعددة */}
-          <div className="absolute -inset-6">
+          <div className="absolute -inset-4 md:-inset-6">
             <div
-              className="w-full h-full border-[3px] border-transparent border-t-yellow-400 border-r-yellow-400 rounded-full animate-spin"
+              className="w-full h-full border-[2px] md:border-[3px] border-transparent border-t-yellow-400 border-r-yellow-400 rounded-full animate-spin"
               style={{ animationDuration: "3s" }}
             />
           </div>
-          <div className="absolute -inset-8">
+          <div className="absolute -inset-6 md:-inset-8">
             <div
-              className="w-full h-full border-[2px] border-transparent border-b-white/40 border-l-white/40 rounded-full animate-spin"
+              className="w-full h-full border-[1.5px] md:border-[2px] border-transparent border-b-white/40 border-l-white/40 rounded-full animate-spin"
               style={{ animationDuration: "4s", animationDirection: "reverse" }}
             />
           </div>
@@ -81,32 +81,32 @@ const Loading = ({ onComplete }) => {
           />
 
           {/* اللوجو */}
-          <div className="relative bg-white rounded-full p-10 shadow-[0_25px_70px_rgba(0,0,0,0.2)]">
+          <div className="relative bg-white rounded-full p-6 md:p-10 shadow-[0_25px_70px_rgba(0,0,0,0.2)]">
             <img
               src={MainLogo}
               alt="Dental Clinic Logo"
-              className="w-36 h-36 object-contain"
+              className="w-24 h-24 md:w-36 md:h-36 object-contain"
             />
           </div>
         </div>
 
         {/* النص */}
-        <div className="text-center space-y-3 px-4">
-          <h1 className="pb-2 text-5xl font-bold text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
+        <div className="text-center space-y-2 md:space-y-3 px-4">
+          <h1 className="pb-1 md:pb-2 text-3xl md:text-5xl font-bold text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.3)]">
             التميز في رعاية الأسنان
           </h1>
-          <p className="text-xl text-white/95 font-medium drop-shadow-lg">
+          <p className="text-base md:text-xl text-white/95 font-medium drop-shadow-lg">
             عيادات أبو النجا لتقويم وزراعة الأسنان
           </p>
-          <p className="text-lg text-white/85 drop-shadow-md">
+          <p className="text-sm md:text-lg text-white/85 drop-shadow-md">
             Abo Elnaga Dental Clinics
           </p>
         </div>
 
         {/* Progress Bar */}
-        <div className="w-96 max-w-md px-4" dir="ltr">
+        <div className="w-full max-w-[280px] md:max-w-md px-4" dir="ltr">
           {/* شريط التقدم */}
-          <div className="relative h-3 bg-white/20 rounded-full overflow-hidden backdrop-blur-sm shadow-lg">
+          <div className="relative h-2.5 md:h-3 bg-white/20 rounded-full overflow-hidden backdrop-blur-sm shadow-lg">
             {/* الخلفية المتوهجة */}
             <div
               className="absolute right-0 top-0 bottom-0 bg-gradient-to-l from-yellow-400 to-yellow-500 rounded-full transition-all duration-300 ease-out"

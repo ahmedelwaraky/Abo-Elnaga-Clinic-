@@ -24,11 +24,11 @@ const WhatsAppButton = () => {
     <>
       <button
         onClick={handleClick}
-        className="fixed bottom-6 left-6 z-50 w-16 h-16 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full shadow-lg hover:shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 animate-float-whatsapp cursor-pointer"
+        className="fixed bottom-4 left-4 md:bottom-6 md:left-6 z-50 w-14 h-14 md:w-16 md:h-16 bg-[#25D366] hover:bg-[#20BA5A] text-white rounded-full shadow-lg hover:shadow-2xl flex items-center justify-center transition-all duration-300 hover:scale-110 animate-float-whatsapp cursor-pointer"
         aria-label="تواصل عبر واتساب"
         title="احجز موعدك الآن"
       >
-        <WhatsAppIcon className="w-8 h-8" />
+        <WhatsAppIcon className="w-7 h-7 md:w-8 md:h-8" />
       </button>
 
       {/* Clinic Selection Popup */}

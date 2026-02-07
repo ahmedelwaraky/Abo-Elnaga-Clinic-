@@ -74,21 +74,21 @@ const HeroSlider = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
           <div className="text-right max-w-3xl mr-auto">
             {/* Title */}
-            <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-bold text-white mb-3 md:mb-4 leading-tight">
               {heroSliders[currentSlide].titleAr}
             </h1>
 
             {/* Subtitle */}
-            <p className="text-lg md:text-xl text-white/95 mb-10 leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 mb-6 md:mb-10 leading-relaxed">
               {heroSliders[currentSlide].subtitleAr}
             </p>
 
             {/* Buttons */}
-            <div className="flex gap-4 justify-start items-center">
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-start items-stretch sm:items-center">
               {/* زرار احجز موعد - أزرق */}
               <button
                 onClick={handleBookingClick}
-                className="px-10 py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-lg shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer"
+                className="px-6 py-3 sm:px-8 sm:py-3.5 md:px-10 md:py-4 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg text-base md:text-lg shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer"
               >
                 احجز موعد
               </button>
@@ -96,7 +96,7 @@ const HeroSlider = () => {
               {/* زرار اعرف المزيد - أصفر */}
               <button
                 onClick={handleLearnMoreClick}
-                className="px-10 py-4 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg text-lg shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer"
+                className="px-6 py-3 sm:px-8 sm:py-3.5 md:px-10 md:py-4 bg-yellow-500 hover:bg-yellow-600 text-white font-semibold rounded-lg text-base md:text-lg shadow-lg transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer"
               >
                 اعرف المزيد
               </button>
@@ -105,10 +105,10 @@ const HeroSlider = () => {
         </div>
       </div>
 
-      {/* Navigation Arrows */}
+      {/* Navigation Arrows - مخفية على الموبايل */}
       <button
         onClick={prevSlide}
-        className="absolute left-8 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all duration-300 transform hover:scale-110 active:scale-95 cursor-pointer group"
+        className="hidden md:block absolute left-8 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all duration-300 transform hover:scale-110 active:scale-95 cursor-pointer group"
         aria-label="Previous slide"
       >
         <ChevronLeft className="w-8 h-8 transition-transform group-hover:-translate-x-1" />
@@ -116,22 +116,22 @@ const HeroSlider = () => {
 
       <button
         onClick={nextSlide}
-        className="absolute right-8 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all duration-300 transform hover:scale-110 active:scale-95 cursor-pointer group"
+        className="hidden md:block absolute right-8 top-1/2 -translate-y-1/2 z-20 p-3 rounded-full bg-white/10 backdrop-blur-sm text-white hover:bg-white/20 transition-all duration-300 transform hover:scale-105 active:scale-95 cursor-pointer group"
         aria-label="Next slide"
       >
         <ChevronRight className="w-8 h-8 transition-transform group-hover:translate-x-1" />
       </button>
 
       {/* Dot Indicators */}
-      <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-3">
+      <div className="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 z-20 flex gap-2 md:gap-3">
         {heroSliders.map((_, index) => (
           <button
             key={index}
             onClick={() => goToSlide(index)}
             className={`transition-all duration-300 rounded-full cursor-pointer ${
               index === currentSlide
-                ? "w-10 h-3 bg-yellow-500"
-                : "w-3 h-3 bg-white/60 hover:bg-white/90"
+                ? "w-8 h-2.5 md:w-10 md:h-3 bg-yellow-500"
+                : "w-2.5 h-2.5 md:w-3 md:h-3 bg-white/60 hover:bg-white/90"
             }`}
             aria-label={`Go to slide ${index + 1}`}
           />
